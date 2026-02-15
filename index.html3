@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mano puslapis</title>
+<style>
+body {
+  background:#07161c;
+  color:white;
+  text-align:center;
+  font-family:Arial;
+  padding:50px;
+}
+.button {
+  border:2px solid white;
+  padding:15px 40px;
+  display:inline-block;
+  margin:20px;
+  text-decoration:none;
+  color:white;
+  cursor:pointer;
+}
+.product {
+  border:1px solid white;
+  margin:20px auto;
+  padding:20px;
+  width:300px;
+  display:none; /* pradžioje nematomi */
+}
+</style>
+</head>
+<body>
+
+<h1>Main Page</h1>
+<p>All products are replicas, when buying you accept this fact.</p>
+
+<button class="button" onclick="showProducts()">Items in stock</button>
+<br>
+<a href="#" class="button">>>>Order here<<<</a>
+
+<div class="product" id="product1">
+  <h3>Nike Tech</h3>
+  <p>Kaina: 80€</p>
+</div>
+
+<div class="product" id="product2">
+  <h3>Moncler striukė</h3>
+  <p>Kaina: 150€</p>
+</div>
+
+<script>
+function showProducts() {
+  document.getElementById("product1").style.display = "block";
+  document.getElementById("product2").style.display = "block";
+}
+</script>
+
+</body>
+</html>
