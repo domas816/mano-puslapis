@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mano puslapis</title>
+<style>
+body {
+  background:#07161c;
+  color:white;
+  text-align:center;
+  font-family:Arial, sans-serif;
+  padding:50px;
+}
+.button {
+  border:2px solid white;
+  padding:15px 40px;
+  margin:20px;
+  text-decoration:none;
+  color:white;
+  cursor:pointer;
+  display:inline-block;
+}
+.products-container {
+  margin-top:40px;
+}
+.product {
+  border:1px solid white;
+  margin:20px auto;
+  padding:20px;
+  width:300px;
+  display:none;
+}
+</style>
+</head>
+<body>
+
+<h1>Main Page</h1>
+<p>All products are replicas, when buying you accept this fact.</p>
+
+<button class="button" id="showItemsBtn">Items in stock</button>
+<a href="#" class="button">>>>Order here<<<</a>
+
+<div class="products-container">
+  <div class="product" id="product1">
+    <h3>Nike Tech</h3>
+    <p>Kaina: 80€</p>
+  </div>
+  <div class="product" id="product2">
+    <h3>Moncler striukė</h3>
+    <p>Kaina: 150€</p>
+  </div>
+</div>
+
+<script>
+document.getElementById("showItemsBtn").addEventListener("click", function() {
+  const products = document.querySelectorAll(".product");
+  products.forEach(p => p.style.display = "block");
+  // Slink puslapį į prekių vietą
+  products[0].scrollIntoView({behavior: "smooth"});
+});
+</script>
+
+</body>
+</html>
